@@ -122,7 +122,7 @@ a {
 }
 
 a:hover {
-  color: #e90059;
+  color: #ea1f00;
   text-decoration: underline;
 }
 
@@ -373,7 +373,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1em;
   margin-top: 0;
   margin-bottom: 1.25rem;
   line-height: 1.6;
@@ -404,7 +404,7 @@ a:hover, a:focus {
 }
 
 a.link-inverse {
-  color: #e90059;
+  color: #ea1f00;
 }
 
 a.link-inverse:hover {
@@ -442,7 +442,7 @@ a.link-inverse:hover {
 }
 
 .text-grey {
-  color: #726d72;
+  color: #858897;
 }
 
 .text-uppercase {
@@ -484,7 +484,7 @@ a.link-inverse:hover {
 .blockquote, blockquote {
   padding: 30px;
   background: #f6f6f6;
-  border-left: 4px solid #726d72;
+  border-left: 4px solid #858897;
 }
 
 .mt-0 {
@@ -1062,6 +1062,11 @@ a.link-inverse:hover {
   align-items: center !important;
 }
 
+.header .header__top {
+  background: #1b1b22;
+  color: #ffffff;
+}
+
 .checkbox {
   display: -ms-flexbox;
   display: flex;
@@ -1078,7 +1083,7 @@ a.link-inverse:hover {
 .checkbox__input:checked + .checkbox__label:after {
   content: '';
   display: block;
-  background-color: #e90059;
+  background-color: #858897;
   width: 5px;
   height: 5px;
   position: absolute;
@@ -1165,7 +1170,7 @@ a.link-inverse:hover {
 }
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-success .jGrowl-close {
-  background: #726d72;
+  background: #858897;
 }
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-error {
@@ -1174,4 +1179,28 @@ a.link-inverse:hover {
 
 .jGrowl#jGrowl .jGrowl-notification.af-message-error .jGrowl-close {
   background: #df0a0a;
+}
+
+.footer {
+  background: #1b1b22;
+}
+
+.footer-additionally {
+  padding: 12px 0;
+  color: #626273;
+  background: #22222b;
+}
+
+.footer-additionally .footer-additionally__text {
+  font-size: 12px;
+  line-height: 1;
+  margin: 0;
+}
+
+.footer-additionally .footer-link {
+  color: #626273;
+}
+
+.footer-additionally .footer-link:hover {
+  color: #ea1f00;
 }

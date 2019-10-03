@@ -1,0 +1,20 @@
+.footer{
+    background: $dark-blue;
+
+    &-additionally{
+        padding: 12px 0;
+        color: #626273;
+        background: $light-blue;
+        .footer-additionally__text{
+            font-size: 12px;
+            line-height: 1;
+            margin: 0;
+        }
+        .footer-link{
+            color: #626273;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+    }
+}
