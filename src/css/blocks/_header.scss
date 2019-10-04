@@ -1,0 +1,22 @@
+.header-block{
+    background: $blue url("../img/line.svg") left top / 80px;
+    padding: 180px 0 120px;
+    margin-top: -150px;
+    color: #d7d1d1;
+    
+    .header-block__title{
+        font-size: 42px;
+        font-weight: 300;
+        color: $white;
+        .text-bold{
+            font-weight: 700;
+        }
+
+        & + .header-block__offer {
+            margin-top: 42px;
+        }
+    }
+    .header-block__offer{
+        margin-bottom: 0;
+    }
+}

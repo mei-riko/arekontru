@@ -54,4 +54,51 @@
             }
         }
     }
+    &_step{
+        display: flex;
+        flex-wrap: wrap;
+        .list__item{
+            flex: 0 0 calc(100%/3);
+            max-width: calc(100%/3);
+            
+            color: $dark-grey;
+            
+            text-transform: uppercase;
+            line-height: 1.4;
+            
+            padding-top: 40px;
+            padding-left: 80px;
+
+            position: relative;
+
+            &:after{
+                content: '';
+                display: block;
+
+                border: 16px solid $grey;
+                border-radius: 50%;
+
+                position: absolute;
+                left: 0px;
+                top: 0px;
+
+                width: 102px;
+                height: 102px;
+
+                opacity: .1;
+            }
+
+            .list__info{
+                position: relative;
+                z-index: 1;
+            }
+            .list__number{
+                position: absolute;
+                left: 36px;
+                top: 38px;
+                font-size: 16px;
+                font-weight: 900;
+            }
+        }    
+    }
 }

@@ -1,0 +1,43 @@
+.btn{
+    outline: none;
+    border: none;
+    background: initial;
+    padding: 12px 20px;
+    &:hover, &:focus{
+        outline: none;
+    }
+
+    .btn__inside{
+        position: relative;
+        z-index: 11;
+    }
+
+    &_cta{
+        position: relative;
+        overflow: hidden;
+        font-weight: 700;
+        color: $white;
+        background: $orange;
+
+        &:after{
+            content: '';
+            display: block;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(0deg, $orange 0%, $dark-orange 100%);
+
+            transition: .5s;
+        }
+
+        &:hover{
+            &:after{
+                opacity: .5;
+            }
+        }
+    }
+}
