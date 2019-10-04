@@ -1,6 +1,58 @@
 .header{
     .header__top{
+        padding: 12px 0;
         background: $dark-blue;
         color: $white;
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+
+            font-size: 12px;
+            .list__item{
+                & + .list__item{
+                    margin-left: 24px;
+                }
+            }
+            .list__link{
+                color: $white;
+                &:hover{
+                    color: $link-hover-color;
+                }
+            }
+
+            &_contacts{
+                justify-content: flex-end;
+                color: $light-text;
+                .list__link{
+                    color: $light-text;
+                    &:hover{
+                        color: $link-hover-color;
+                    }
+                }
+            }
+        }
+    }
+    .header__bottom{
+        background: $blue;
+        padding: 40px 0;
+    }
+    .header__logo{
+        height: 70px;
+        width: 300px;
+        max-width: 100%;
+        background: url("../img/logo-light.svg") no-repeat left center / contain;
+    }
+    .header__phone{
+        color: $white;
+        font-size: 24px;
+        font-weight: bold;
+
+        padding-left: 32px;
+        background: url("../img/telephone-gradient.svg") no-repeat left center / 18px;
+
+        &:hover{
+            text-decoration: none;
+            color: $link-hover-color;
+        }
     }
 }

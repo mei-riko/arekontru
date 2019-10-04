@@ -1,0 +1,57 @@
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .list__item{}
+    .list__link{}
+
+    &_circle{
+        .list__item{
+            position: relative;
+            padding-left: 12px;
+            &:before{
+                content: '';
+                display: block;
+                background: linear-gradient( 180deg, $orange 0%, $dark-orange 100%);
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - 3px);
+                width: 6px;
+                height: 6px;
+                border-radius: 6px;  
+            }
+        }
+    }
+    &_icon{
+        .list__item{
+            position: relative;
+            padding-left: 20px;
+            &:before{
+                content: '';
+                display: block;
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - 9px);
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .list_icon__phone{
+            &:before{
+                background: url("../img/telephone-gradient.svg") no-repeat left center / 12px;
+            }
+        }
+        .list_icon__mail{
+            &:before{
+                background: url("../img/envelope-gradient.svg") no-repeat left center / 12px;
+            }
+        }
+        .list_icon__place{
+            &:before{
+                background: url("../img/point-gradient.svg") no-repeat left center / 12px;
+            }
+        }
+    }
+}

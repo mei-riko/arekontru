@@ -1,9 +1,32 @@
 .footer{
+    padding: 30px 0;
     background: $dark-blue;
+    color: $white;
+    font-size: 12px;
+
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        .list__link{
+            color: $white;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+        &_icon{
+            justify-content: flex-end;
+        }
+    }
+    .footer__logo{
+        height: 54px;
+        width: 210px;
+        max-width: 100%;
+        background: url("../img/logo-light.svg") no-repeat left center / contain;
+    }
 
     &-additionally{
         padding: 12px 0;
-        color: #626273;
+        color: $light-text;
         background: $light-blue;
         .footer-additionally__text{
             font-size: 12px;
@@ -11,7 +34,7 @@
             margin: 0;
         }
         .footer-link{
-            color: #626273;
+            color: $light-text;
             &:hover{
                 color: $link-hover-color;
             }
