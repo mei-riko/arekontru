@@ -1,3 +1,64 @@
 .content{
     padding: 80px 0;
+    &_bg-grey{
+        background: $light-grey url("../img/line-black.svg") left top / 60px;
+    }
+
+    .content__inside{
+        width: 900px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        font-size: 16px;
+        line-height: 1.7;
+
+        ul{
+            list-style: none;
+            li{
+                position: relative;
+                & + li{
+                    margin-top: .5rem;
+                }
+                &:before{
+                    content: '';
+                    display: block;
+        
+                    width: 7px;
+                    height: 7px;
+        
+                    border-radius: 8px;
+                    border: 2px solid $dark-orange;
+        
+                    position: absolute;
+                    left: -1.75rem;
+                    top: 10px;
+                }
+            }
+        }
+        ol{
+            list-style-type: none;
+            counter-reset: num;
+            li{
+                position: relative;
+                & + li{
+                    margin-top: .5rem;
+                }
+                &:before {
+                    content: counter(num) '. ';
+                    counter-increment: num;
+                    color: $dark-orange;
+                    font-weight: 700;
+
+                    position: absolute;
+                    left: -1.75rem;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}
+
+.map{
+    max-width: 100%;
+    overflow: hidden;
 }

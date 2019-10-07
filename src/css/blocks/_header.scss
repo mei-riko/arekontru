@@ -1,9 +1,9 @@
 .header-block{
-    background: $blue url("../img/line.svg") left top / 80px;
+    background: $blue url("../img/line.svg") left top / 60px;
     padding: 180px 0 120px;
     margin-top: -150px;
     color: #d7d1d1;
-    
+   
     .header-block__title{
         font-size: 42px;
         font-weight: 300;
@@ -18,5 +18,34 @@
     }
     .header-block__offer{
         margin-bottom: 0;
+    }
+
+    &_inside{
+        padding-bottom: 90px;
+        .header-block_inside__title{
+            @extend .h4;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+    }
+    &_error{
+        min-height: calc(100vh - 192px);
+        .header-block__title{
+            font-size: 160px;
+            line-height: 120px;
+            font-weight: 700;
+        }
+        .lead{
+            font-size: 18px;
+            line-height: 24px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .link-inverse{
+            &:hover{
+                color: $white;
+            }
+        }
     }
 }

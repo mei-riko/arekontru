@@ -19,9 +19,9 @@ h1, h2, h3, h4, h5, h6,
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: 2.5rem;
+    margin-top: 2.75rem;
 }
-.h1,h1{font-size: 2.75rem;}
+.h1,h1{font-size: 3rem;}
 .h2,h2{font-size: 2.5rem;}
 .h3,h3{font-size: 2rem;}
 .h4,h4{font-size: 1.75rem;}
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6,
 p {
     font-size: 1em;
     margin-top: 0;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
     &.small{
         font-size: .9em;
@@ -43,8 +43,9 @@ p {
 ol, ul{
     padding: 0;
     margin-bottom: 1.25rem;
-    padding-left: 1.25rem;
+    padding-left: 1.75rem;
 }
+
 a{
     display: inline-block;
     outline: none;
@@ -102,9 +103,19 @@ a{
 }
 
 .blockquote, blockquote{
-    padding: 30px;
+    position: relative;
+    padding: 30px 120px;
     background: $light-grey;
-    border-left: 4px solid $grey;
+    &::before {
+        content: "“";
+        position: absolute;
+        left: 60px;
+        top: 28px;
+        font-size: 70px;
+        font-weight: bold;
+        line-height: 1;
+        color: $dark-orange;
+    }
 }
 
 .mt-0{margin-top: 0px;}

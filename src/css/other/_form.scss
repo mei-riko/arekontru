@@ -8,6 +8,8 @@
     padding: 12px 20px;
     border: 1px solid #ceced4;
     background: $white;
+    resize: none;
+
     &:hover{
         outline: none;
         &::placeholder{
@@ -20,8 +22,11 @@
     &::placeholder{
         color: #ceced4;
     }
+    & + .input,
+    & + .btn{
+        margin-top: 15px;
+    }
 }
-
 .checkbox{
     display: flex;
     flex-wrap: nowrap;
@@ -86,6 +91,21 @@
             }
         }
     }
+}
+
+.form-group{
+    &_inline{
+        display: flex;
+        flex-wrap: nowrap;
+        .input + .btn{
+            margin-left: 10px;
+            margin-top: 0;
+        }
+    }
+}
+
+.fullwidth{
+    width: 100%;
 }
 
 .jGrowl {

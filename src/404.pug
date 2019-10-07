@@ -1,0 +1,42 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        .header-block.header-block_error
+            .container
+                .row.align-items-center
+                    .col-4
+                        h1.header-block__title.text-white.mb-0 404
+                    .col-8
+                        p.lead Кажется что-то пошло не так. Страница, которую вы запрашиваете не существует или&nbsp;была удалена. 
+                            | Переходите на 
+                            a.link-inverse(href="/") главную страницу
+                            |  и попробуйте найти необходимую информацию там.
+                        p.lead Или просто 
+                            a.link-inverse(href="#" data-fancybox data-src="#contact-form") напишите нам
+                            |  и мы ответим на все вопросы.
+        include chunks/footer.pug
+        script(src="./js/jquery.fancybox.min.js")
+
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")
+        .modal.modal_form#contact-form
+            .modal__content
+                form.form(action="")
+                    .form-group
+                        input.input.fullwidth.phone(type="tel" placeholder="Номер телефона")
+                        textarea.input.fullwidth(name="", cols="30", rows="4")
+                        button.btn.btn_cta.fullwidth 
+                            span.btn__inside Проконсультироваться
+                    .form__agree.checkbox.text-small
+                        input.checkbox__input#policy(type="checkbox" checked="")
+                        label.checkbox__label(for="policy") согласен с обработкой 
+                            a.checkbox__link(href="/privacy.pdf" title="Соглашение на обработку персональных данных") персональных данных

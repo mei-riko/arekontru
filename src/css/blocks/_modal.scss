@@ -1,0 +1,27 @@
+.modal{
+    display: none;
+    width: 720px;
+    max-width: 100%;
+
+    padding: 0;
+    .modal__content{
+        padding: 40px;
+        background: $light-grey url("../img/line-black.svg") left top / 80px;
+    }
+
+    &_form{
+        width: 480px;
+    }
+}
+
+.modal-open{
+    font-size: 42px;
+    font-weight: 300;
+
+    color: $light-grey;
+    transition: .4s;
+    cursor: pointer;
+    &:hover{
+        color: $grey;
+    }
+}

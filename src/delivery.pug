@@ -1,0 +1,42 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Delivery Page
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        .header-block
+            .container
+                .row
+                    .col-4
+                        h1.text-bold.text-white.h3 Доставка товаров
+                    .col-8
+                        p.mb-0 Lorem ipsum dolor sit amet. Nisi ut labore et voluptates repudiandae sint. Placeat, facere possimus, omnis iste natus error sit voluptatem. Molestiae non numquam eius modi. Nesciunt, neque porro quisquam est. Neque porro quisquam est. Mollitia animi, id est laborum et iusto odio dignissimos ducimus. Inventore veritatis et dolorum fuga dolorum fuga facilis est et expedita distinctio. Cupiditate non numquam eius modi tempora incidunt, ut aut fugit, sed quia.
+        .content
+            .container
+                .row
+                    .col-4
+                        p.h4.text-bold.mb-0 Зоны доставки
+                    .col-8
+                        ul.list.list_circle
+                            li.list__item зона 1 	—	100 руб.
+                            li.list__item зона 2 	—	200 руб.
+                            li.list__item зона 3 	—	500 руб.
+                        .map.mt-60
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A649d0ecff95d38b4fd9e56558e43f2f3bc523c9c2f70f35ba1b00e870a3268c5&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        .content.content_bg-grey
+            .container
+                .row
+                    .col-4
+                        p.h4.text-bold.mb-0 Оплата аренды
+                    .col-8
+                        p Lorem ipsum dolor sit amet. Nisi ut labore et voluptates repudiandae sint. Placeat, facere possimus, omnis iste natus error sit voluptatem. Molestiae non numquam eius modi. Nesciunt, neque porro quisquam est. Neque porro quisquam est. Mollitia animi, id est laborum et iusto odio dignissimos ducimus. Inventore veritatis et dolorum fuga dolorum fuga facilis est et expedita distinctio. Cupiditate non numquam eius modi tempora incidunt, ut aut fugit, sed quia.
+                        p.mb-0 Mollitia animi, id est laborum et iusto odio dignissimos ducimus. Inventore veritatis et dolorum fuga dolorum fuga facilis est et expedita distinctio. Cupiditate non numquam eius modi tempora incidunt, ut aut fugit, sed quia.
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")

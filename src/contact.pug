@@ -1,0 +1,53 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        .header-block.header-block_inside
+            .container
+                h1.text-white.header-block_inside__title Контактная информация
+                .table.table_dark-color
+                    .row.no-gutters
+                        .table-row.col-6
+                            .table-row__label Телефон
+                            .table-row__value
+                                p.mb-0
+                                    a(href="tel: 8 800 111-22-33") 8 800 111-22-33
+                        .table-row.col-6
+                            .table-row__label Адрес офиса
+                            .table-row__value
+                                p.mb-0 Санкт-Петербург, Выборгская наб дом 15
+                    .row.no-gutters
+                        .table-row.col-6
+                            .table-row__label E-mail
+                            .table-row__value 
+                                p.mb-0
+                                    a(href="mailto:info@arekont.ru") info@arekont.ru
+                        .table-row.col-6
+                            .table-row__label ИНН
+                            .table-row__value 
+                                p.mb-0 7842055050
+                    .row.no-gutters
+                        .table-row.col-6
+                            .table-row__label Режим работы
+                            .table-row__value 
+                                p.mb-0 ПН - ПТ 10.00 - 19.00
+                                p.mb-0 СБ - ВС 10.00 - 17.00
+                        .table-row.col-6
+                            .table-row__label КПП
+                            .table-row__value 
+                                p.mb-0 784201001
+                                p.mb-0
+                                    a.link-inverse(href="#") Скачать реквизиты компании
+        .map
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5db2e6b8bf53ec1f92c5262b10d6efeb2f37e7eda53b5ff3628f2f68701d46ba&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")

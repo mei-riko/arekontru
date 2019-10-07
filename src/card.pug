@@ -1,0 +1,23 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        include chunks/header.pug
+        .header-block.header-block_inside
+            .container
+                h1.text-bold.text-white.h3 Пришлите карточку предприятия и получите бытовку из вагонки:
+                .list.list_check
+                    .list__item через 3 часа
+                    .list__item по цене ДВП
+                    .list__item без залога
+                    .list__item только новую
+        include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")

@@ -76,7 +76,26 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _jquery2.default)(document).ready(function () {});
+(0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)("a.scroll").click(function () {
+        (0, _jquery2.default)("html, body").animate({
+            scrollTop: (0, _jquery2.default)((0, _jquery2.default)(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
+    });
+
+    // Input mask
+    if ((0, _jquery2.default)('.phone').length > 0) {
+        (0, _jquery2.default)(".phone").inputmask({
+            mask: "8 999 999 99 99",
+            placeholder: " ",
+            showMaskOnHover: true
+        });
+    }
+});
 
 /***/ }),
 /* 1 */
