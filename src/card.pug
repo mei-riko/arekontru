@@ -5,19 +5,54 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Basic Page
 
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-        .header-block.header-block_inside
+        .header-block.header-block_card
             .container
                 h1.text-bold.text-white.h3 Пришлите карточку предприятия и получите бытовку из вагонки:
-                .list.list_check
+                .list.list_check.list_inline.text-uppercase
                     .list__item через 3 часа
                     .list__item по цене ДВП
                     .list__item без залога
                     .list__item только новую
+        .content.content_card
+            .container
+                .row
+                    .col-6
+                        .slider.slider_for
+                            .slider__image
+                                img.slider__item(src="./img/demo-1.png")
+                                img.slider__item(src="./img/demo-2.png")
+                                img.slider__item(src="./img/demo-3.png")
+                                img.slider__item(src="./img/demo-4.png")
+                            .slider__nav
+                                img.slider__item(src="./img/demo-1.png")
+                                img.slider__item(src="./img/demo-2.png")
+                                img.slider__item(src="./img/demo-3.png")
+                                img.slider__item(src="./img/demo-4.png")
+                    .col-6
+                ul.nav#myTab(role="tablist")
+                    li.nav__item
+                        a.nav__link.active#equipment-tab(data-toggle="tab" href="#equipment" role="tab" aria-controls="equipment" aria-selected="true") Дополнительная комплектация
+                    li.nav__item
+                        a.nav__link#characteristic-tab(data-toggle="tab" href="#characteristic" role="tab" aria-controls="characteristic" aria-selected="false") Характеристики
+                    li.nav__item
+                        a.nav__link#pay-tab(data-toggle="tab" href="#pay" role="tab" aria-controls="pay" aria-selected="false") Оплата
+                .tab-content.tab-content_product#myTabContent
+                    .tab-pane.fade.show.active#equipment(role="tabpanel" aria-labelledby="equipment-tab")
+                        p 1
+                    .tab-pane.fade#characteristic(role="tabpanel" aria-labelledby="characteristic-tab")
+                        p 2
+                    .tab-pane.fade#pay(role="tabpanel" aria-labelledby="pay-tab")
+                        p 3
         include chunks/footer.pug
+        script(src="./js/util.js")
+        script(src="./js/tab.js")
+        script(src="./js/slick.min.js")
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Basic Page</title>
+    <link href="./css/slick.css" rel="stylesheet"/>
+    <link href="./css/slick-theme.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -37,14 +39,43 @@
         </div>
       </div>
     </header>
-    <div class="header-block header-block_inside">
+    <div class="header-block header-block_card">
       <div class="container">
         <h1 class="text-bold text-white h3">Пришлите карточку предприятия и получите бытовку из вагонки:</h1>
-        <div class="list list_check">
+        <div class="list list_check list_inline text-uppercase">
           <div class="list__item">через 3 часа</div>
           <div class="list__item">по цене ДВП</div>
           <div class="list__item">без залога</div>
           <div class="list__item">только новую</div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_card">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="slider slider_for">
+              <div class="slider__image"><img class="slider__item" src="./img/demo-1.png"/><img class="slider__item" src="./img/demo-2.png"/><img class="slider__item" src="./img/demo-3.png"/><img class="slider__item" src="./img/demo-4.png"/></div>
+              <div class="slider__nav"><img class="slider__item" src="./img/demo-1.png"/><img class="slider__item" src="./img/demo-2.png"/><img class="slider__item" src="./img/demo-3.png"/><img class="slider__item" src="./img/demo-4.png"/></div>
+            </div>
+          </div>
+          <div class="col-6"></div>
+        </div>
+        <ul class="nav" id="myTab" role="tablist">
+          <li class="nav__item"><a class="nav__link active" id="equipment-tab" data-toggle="tab" href="#equipment" role="tab" aria-controls="equipment" aria-selected="true">Дополнительная комплектация</a></li>
+          <li class="nav__item"><a class="nav__link" id="characteristic-tab" data-toggle="tab" href="#characteristic" role="tab" aria-controls="characteristic" aria-selected="false">Характеристики</a></li>
+          <li class="nav__item"><a class="nav__link" id="pay-tab" data-toggle="tab" href="#pay" role="tab" aria-controls="pay" aria-selected="false">Оплата</a></li>
+        </ul>
+        <div class="tab-content tab-content_product" id="myTabContent">
+          <div class="tab-pane fade show active" id="equipment" role="tabpanel" aria-labelledby="equipment-tab">
+            <p>1</p>
+          </div>
+          <div class="tab-pane fade" id="characteristic" role="tabpanel" aria-labelledby="characteristic-tab">
+            <p>2</p>
+          </div>
+          <div class="tab-pane fade" id="pay" role="tabpanel" aria-labelledby="pay-tab">
+            <p>3</p>
+          </div>
         </div>
       </div>
     </div>
@@ -74,6 +105,9 @@
         </div>
       </div>
     </div>
+    <script src="./js/util.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>
     <script src="./js/app.min.js"></script>
   </body>

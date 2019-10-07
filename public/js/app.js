@@ -92,7 +92,45 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         (0, _jquery2.default)(".phone").inputmask({
             mask: "8 999 999 99 99",
             placeholder: " ",
-            showMaskOnHover: true
+            showMaskOnHover: true,
+            onincomplete: function onincomplete() {
+                (0, _jquery2.default)(this).closest("form").addClass('error-phone');
+                (0, _jquery2.default)(this).addClass('error');
+                (0, _jquery2.default)(this).siblings(".error_phone").addClass('error').html('Укажите корректный номер');
+            },
+            oncomplete: function oncomplete() {
+                (0, _jquery2.default)(this).closest("form").removeClass('error-phone');
+                (0, _jquery2.default)(this).removeClass('error');
+                (0, _jquery2.default)(this).siblings(".error_phone").removeClass('error').html('');
+            }
+        });
+    }
+    (0, _jquery2.default)('input.phone').on('keydown', function (event) {
+        if (event.keyCode === 13 && !(0, _jquery2.default)(this).inputmask("isComplete")) {
+            event.preventDefault();
+            (0, _jquery2.default)(this).blur();
+            return false;
+        }
+    });
+
+    // Product Slider
+    if ((0, _jquery2.default)(".slider").length > 0) {
+        (0, _jquery2.default)('.slider_for .slider__image').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            fade: true,
+            asNavFor: '.slider_for .slider__nav'
+        });
+        (0, _jquery2.default)('.slider_for .slider__nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slider_for .slider__image',
+            arrows: false,
+            dots: false,
+            // centerMode: true,
+            focusOnSelect: true
         });
     }
 });

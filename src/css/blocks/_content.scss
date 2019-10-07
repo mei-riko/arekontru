@@ -14,22 +14,14 @@
 
         ul{
             list-style: none;
+            @extend .list_circle;
             li{
-                position: relative;
+                @extend .list__item;
+                padding-left: 0;
                 & + li{
                     margin-top: .5rem;
                 }
                 &:before{
-                    content: '';
-                    display: block;
-        
-                    width: 7px;
-                    height: 7px;
-        
-                    border-radius: 8px;
-                    border: 2px solid $dark-orange;
-        
-                    position: absolute;
                     left: -1.75rem;
                     top: 10px;
                 }

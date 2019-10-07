@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    .list__item{}
-    .list__link{}
 
     &_circle{
         .list__item{
@@ -100,5 +98,49 @@
                 font-weight: 900;
             }
         }    
+    }
+    &_check{
+        .list__item{
+            position: relative;
+            padding: 20px 0;
+            padding-left: 60px;
+            &:before{
+                content: '';
+                display: block;
+
+                background: url("../img/check-white.svg") no-repeat center / 12px;
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - 20px);
+                width: 40px;
+                height: 40px;
+                
+                z-index: 2;
+            }
+            &:after{
+                content: '';
+                display: block;
+                background: linear-gradient( 180deg, $orange 0%, $dark-orange 100%);
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - 20px);
+                width: 40px;
+                height: 40px;
+                border-radius: 100%; 
+                
+                z-index: 1;
+            }
+        }
+    }
+    &_inline{
+        display: flex;
+        flex-wrap: nowrap;
+        .list__item{
+            & + .list__item{
+                margin-left: 60px;
+            }
+        }
     }
 }
