@@ -6,7 +6,7 @@
     &_circle{
         .list__item{
             position: relative;
-            padding-left: 12px;
+            padding-left: 16px;
             &:before{
                 content: '';
                 display: block;
@@ -14,7 +14,7 @@
 
                 position: absolute;
                 left: 0;
-                top: calc(50% - 3px);
+                top: 8px;
                 width: 6px;
                 height: 6px;
                 border-radius: 6px;  
@@ -116,6 +116,44 @@
                 width: 40px;
                 height: 40px;
                 
+                z-index: 2;
+            }
+            &:after{
+                content: '';
+                display: block;
+                background: linear-gradient( 180deg, $orange 0%, $dark-orange 100%);
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - 20px);
+                width: 40px;
+                height: 40px;
+                border-radius: 100%; 
+                
+                z-index: 1;
+            }
+        }
+    }
+    &_info{
+        .list__item{
+            position: relative;
+            padding: 20px 0;
+            padding-left: 60px;
+            &:before{
+                content: '!';
+                display: block;
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - 20px);
+                width: 40px;
+                height: 40px;
+
+                color: $white;
+                text-align: center;
+                font-size: 26px;                
+                line-height: 40px;
+
                 z-index: 2;
             }
             &:after{

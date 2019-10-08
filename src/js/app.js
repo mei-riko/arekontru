@@ -51,9 +51,9 @@ $(document).ready(() =>{
             slidesToScroll: 1,
             asNavFor: '.slider_for .slider__image',
             arrows: false,
-            dots: false,
+            // dots: true,
             // centerMode: true,
-            focusOnSelect: true,
+            focusOnSelect: true
         });
     }
 });

@@ -3,8 +3,12 @@
     border: none;
     background: initial;
     padding: 12px 20px;
+    text-align: center;
+    cursor: pointer;
+
     &:hover, &:focus{
         outline: none;
+        text-decoration: none;
     }
 
     .btn__inside{
@@ -35,6 +39,7 @@
         }
 
         &:hover{
+            color: $white;
             &:after{
                 opacity: .5;
             }

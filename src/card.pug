@@ -30,12 +30,49 @@ html(lang="ru")
                                 img.slider__item(src="./img/demo-2.png")
                                 img.slider__item(src="./img/demo-3.png")
                                 img.slider__item(src="./img/demo-4.png")
+                                img.slider__item(src="./img/demo-2.png")
                             .slider__nav
                                 img.slider__item(src="./img/demo-1.png")
                                 img.slider__item(src="./img/demo-2.png")
                                 img.slider__item(src="./img/demo-3.png")
                                 img.slider__item(src="./img/demo-4.png")
-                    .col-6
+                                img.slider__item(src="./img/demo-2.png")
+                    .col-6.product-info
+                        .row
+                            .col-8
+                                h1.product-info__name Бытовка «С тамбуром»
+                            .col-4.text-right
+                                p.product-info__price.mb-0 200 руб./сутки
+                                p.product-info__available.mb-0 в наличии: 
+                                    span.text-bold 55 шт.
+                        p.product-info__size Размер: 
+                            span.text-bold 6000х2400х2400
+                        .list.list_circle.product-info__list
+                            .list__item Тип отделки: 
+                                span.text-bold вагонка
+                            .list__item Состояние бытовки: 
+                                span.text-bold новое
+                            .list__item Электропроводка
+                            .list__item Розетки внутри: 
+                                span.text-bold 2 штуки
+                            .list__item Окно: 
+                                span.text-bold ПВХ с поворотной створкой
+                            .list__item Утепление: 
+                                span.text-bold пол, стены, потолок
+                            .list__item Комфортная температура: 
+                                span.text-bold до -35
+                        .product-info__calculator#calculator
+                            p.product-info__title Ориентировочная стоимость аренды
+                            p.text-small.text-grey.mb-0 из расчета 6.500 руб./месяц за 1 штуку
+                            .form-group.form-group_inline
+                                .label Количество:
+                                input.input(type="number" value="1")
+                                .label Срок:
+                                input.input(type="number" value="1")
+                            p.text-small.text-grey.mb-0 Итого: 
+                                span.product-info__price 19.500 руб.
+                        a.btn.btn_cta(href="#")
+                            span.btn__inside Арендовать
                 ul.nav#myTab(role="tablist")
                     li.nav__item
                         a.nav__link.active#equipment-tab(data-toggle="tab" href="#equipment" role="tab" aria-controls="equipment" aria-selected="true") Дополнительная комплектация
@@ -45,11 +82,54 @@ html(lang="ru")
                         a.nav__link#pay-tab(data-toggle="tab" href="#pay" role="tab" aria-controls="pay" aria-selected="false") Оплата
                 .tab-content.tab-content_product#myTabContent
                     .tab-pane.fade.show.active#equipment(role="tabpanel" aria-labelledby="equipment-tab")
-                        p 1
+                        .table.table_striped
+                            .table-row
+                                .table-col Электрообогреватель
+                                    .text-small.text-grey Размер 200х200х400 мм
+                                .table-col
+                                    span.text-bold 500 руб./месяц
+                            .table-row
+                                .table-col Электрообогреватель
+                                    .text-small.text-grey Размер 200х200х400 мм
+                                .table-col
+                                    span.text-bold 500 руб./месяц
+                            .table-row
+                                .table-col Электрообогреватель
+                                    .text-small.text-grey Размер 200х200х400 мм
+                                .table-col
+                                    span.text-bold 500 руб./месяц
+                            .table-row
+                                .table-col Электрообогреватель
+                                    .text-small.text-grey Размер 200х200х400 мм
+                                .table-col
+                                    span.text-bold 500 руб./месяц
                     .tab-pane.fade#characteristic(role="tabpanel" aria-labelledby="characteristic-tab")
-                        p 2
+                        .table.table_striped.table_small
+                            .table-row
+                                .table-col 
+                                    span.text-grey Ширина
+                                .table-col
+                                    span.text-bold 500 мм
+                            .table-row
+                                .table-col 
+                                    span.text-grey Длина
+                                .table-col
+                                    span.text-bold 1500 мм
+                            .table-row
+                                .table-col 
+                                    span.text-grey Высота
+                                .table-col
+                                    span.text-bold 2300 мм
                     .tab-pane.fade#pay(role="tabpanel" aria-labelledby="pay-tab")
-                        p 3
+                        .list.list_info
+                            .list__item.text-bold Вернем деньги за неиспользованные дни
+                        .row.mt-30
+                            .col-6
+                                p.text-uppercase.text-bold.mb-10 Без залога
+                                p Воспользоваться данными условиями возможно только при единовременной оплате не меньше 3&nbsp;месяцев аренды.
+                            .col-6
+                                p.text-uppercase.text-bold.mb-10 С залогом
+                                p Минимальный срок аренды - 1&nbsp;месяц. Невозвратная сумма - стоимость аренды 1&nbsp;месяца.
         include chunks/footer.pug
         script(src="./js/util.js")
         script(src="./js/tab.js")

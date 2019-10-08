@@ -128,7 +128,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             slidesToScroll: 1,
             asNavFor: '.slider_for .slider__image',
             arrows: false,
-            dots: false,
+            // dots: true,
             // centerMode: true,
             focusOnSelect: true
         });

@@ -55,11 +55,42 @@
         <div class="row">
           <div class="col-6">
             <div class="slider slider_for">
-              <div class="slider__image"><img class="slider__item" src="./img/demo-1.png"/><img class="slider__item" src="./img/demo-2.png"/><img class="slider__item" src="./img/demo-3.png"/><img class="slider__item" src="./img/demo-4.png"/></div>
-              <div class="slider__nav"><img class="slider__item" src="./img/demo-1.png"/><img class="slider__item" src="./img/demo-2.png"/><img class="slider__item" src="./img/demo-3.png"/><img class="slider__item" src="./img/demo-4.png"/></div>
+              <div class="slider__image"><img class="slider__item" src="./img/demo-1.png"/><img class="slider__item" src="./img/demo-2.png"/><img class="slider__item" src="./img/demo-3.png"/><img class="slider__item" src="./img/demo-4.png"/><img class="slider__item" src="./img/demo-2.png"/></div>
+              <div class="slider__nav"><img class="slider__item" src="./img/demo-1.png"/><img class="slider__item" src="./img/demo-2.png"/><img class="slider__item" src="./img/demo-3.png"/><img class="slider__item" src="./img/demo-4.png"/><img class="slider__item" src="./img/demo-2.png"/></div>
             </div>
           </div>
-          <div class="col-6"></div>
+          <div class="col-6 product-info">
+            <div class="row">
+              <div class="col-8">
+                <h1 class="product-info__name">Бытовка «С тамбуром»</h1>
+              </div>
+              <div class="col-4 text-right">
+                <p class="product-info__price mb-0">200 руб./сутки</p>
+                <p class="product-info__available mb-0">в наличии: <span class="text-bold">55 шт.</span></p>
+              </div>
+            </div>
+            <p class="product-info__size">Размер: <span class="text-bold">6000х2400х2400</span></p>
+            <div class="list list_circle product-info__list">
+              <div class="list__item">Тип отделки: <span class="text-bold">вагонка</span></div>
+              <div class="list__item">Состояние бытовки: <span class="text-bold">новое</span></div>
+              <div class="list__item">Электропроводка</div>
+              <div class="list__item">Розетки внутри: <span class="text-bold">2 штуки</span></div>
+              <div class="list__item">Окно: <span class="text-bold">ПВХ с поворотной створкой</span></div>
+              <div class="list__item">Утепление: <span class="text-bold">пол, стены, потолок</span></div>
+              <div class="list__item">Комфортная температура: <span class="text-bold">до -35</span></div>
+            </div>
+            <div class="product-info__calculator" id="calculator">
+              <p class="product-info__title">Ориентировочная стоимость аренды</p>
+              <p class="text-small text-grey mb-0">из расчета 6.500 руб./месяц за 1 штуку</p>
+              <div class="form-group form-group_inline">
+                <div class="label">Количество:</div>
+                <input class="input" type="number" value="1"/>
+                <div class="label">Срок:</div>
+                <input class="input" type="number" value="1"/>
+              </div>
+              <p class="text-small text-grey mb-0">Итого: <span class="product-info__price">19.500 руб.</span></p>
+            </div><a class="btn btn_cta" href="#"><span class="btn__inside">Арендовать</span></a>
+          </div>
         </div>
         <ul class="nav" id="myTab" role="tablist">
           <li class="nav__item"><a class="nav__link active" id="equipment-tab" data-toggle="tab" href="#equipment" role="tab" aria-controls="equipment" aria-selected="true">Дополнительная комплектация</a></li>
@@ -68,13 +99,63 @@
         </ul>
         <div class="tab-content tab-content_product" id="myTabContent">
           <div class="tab-pane fade show active" id="equipment" role="tabpanel" aria-labelledby="equipment-tab">
-            <p>1</p>
+            <div class="table table_striped">
+              <div class="table-row">
+                <div class="table-col">Электрообогреватель
+                  <div class="text-small text-grey">Размер 200х200х400 мм</div>
+                </div>
+                <div class="table-col"><span class="text-bold">500 руб./месяц</span></div>
+              </div>
+              <div class="table-row">
+                <div class="table-col">Электрообогреватель
+                  <div class="text-small text-grey">Размер 200х200х400 мм</div>
+                </div>
+                <div class="table-col"><span class="text-bold">500 руб./месяц</span></div>
+              </div>
+              <div class="table-row">
+                <div class="table-col">Электрообогреватель
+                  <div class="text-small text-grey">Размер 200х200х400 мм</div>
+                </div>
+                <div class="table-col"><span class="text-bold">500 руб./месяц</span></div>
+              </div>
+              <div class="table-row">
+                <div class="table-col">Электрообогреватель
+                  <div class="text-small text-grey">Размер 200х200х400 мм</div>
+                </div>
+                <div class="table-col"><span class="text-bold">500 руб./месяц</span></div>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="characteristic" role="tabpanel" aria-labelledby="characteristic-tab">
-            <p>2</p>
+            <div class="table table_striped table_small">
+              <div class="table-row">
+                <div class="table-col"> <span class="text-grey">Ширина</span></div>
+                <div class="table-col"><span class="text-bold">500 мм</span></div>
+              </div>
+              <div class="table-row">
+                <div class="table-col"> <span class="text-grey">Длина</span></div>
+                <div class="table-col"><span class="text-bold">1500 мм</span></div>
+              </div>
+              <div class="table-row">
+                <div class="table-col"> <span class="text-grey">Высота</span></div>
+                <div class="table-col"><span class="text-bold">2300 мм</span></div>
+              </div>
+            </div>
           </div>
           <div class="tab-pane fade" id="pay" role="tabpanel" aria-labelledby="pay-tab">
-            <p>3</p>
+            <div class="list list_info">
+              <div class="list__item text-bold">Вернем деньги за неиспользованные дни</div>
+            </div>
+            <div class="row mt-30">
+              <div class="col-6">
+                <p class="text-uppercase text-bold mb-10">Без залога</p>
+                <p>Воспользоваться данными условиями возможно только при единовременной оплате не меньше 3&nbsp;месяцев аренды.</p>
+              </div>
+              <div class="col-6">
+                <p class="text-uppercase text-bold mb-10">С залогом</p>
+                <p>Минимальный срок аренды - 1&nbsp;месяц. Невозвратная сумма - стоимость аренды 1&nbsp;месяца.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

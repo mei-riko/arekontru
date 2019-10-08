@@ -1,0 +1,26 @@
+.table{
+    max-width: 100%;
+
+    .table-row{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .table-col{
+        padding: 16px 20px;
+    }
+
+    &_striped{
+        .table-row:nth-child(2n){
+            background: #f8f8f8;
+        }
+        .table-row:nth-child(2n+1){
+            background: $light-grey;
+        }
+    }
+    &_small{
+        .table-col{
+            padding: 8px 20px;
+        }
+    }
+}

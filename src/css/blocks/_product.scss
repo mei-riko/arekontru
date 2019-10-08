@@ -1,0 +1,65 @@
+.product-info{
+    .product-info__name{
+        @extend .h4;
+        @extend .text-bold;
+    }
+    .product-info__price{
+        @extend .text-orange;
+        @extend .text-bold;
+    }
+    .product-info__available{
+        @extend .text-grey;
+    }
+    .product-info__list{
+        max-width: 100%;
+        overflow: hidden;
+        column-count: 2;
+        column-gap: 12px;
+        .list__item{
+            display: inline-block;
+            width: 100%;
+            white-space: nowrap;
+        }
+    }
+    .product-info__calculator{
+        width: 360px;
+        max-width: 100%;
+        margin: 40px 0 20px;
+        padding: 30px;
+        background: $light-grey;
+        .product-info__title{
+            font-weight: 700;
+            line-height: 1;
+            color: $blue;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        .product-info__price{
+            font-size: 20px;
+            font-weight: 900;
+        }
+        .form-group{
+            align-items: center;
+            margin: 20px 0;
+            .label{
+                font-size: 12px;
+                color: $grey;
+                & + .input{
+                    margin-left: 10px;
+                }
+            }
+            .input{
+                width: 76px;
+                & + .label{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    .btn{
+        font-weight: 700;
+        width: 210px;
+        max-width: 100%;
+    }
+}

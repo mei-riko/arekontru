@@ -1,8 +1,5 @@
 .content{
     padding: 80px 0;
-    &_bg-grey{
-        background: $light-grey url("../img/line-black.svg") left top / 60px;
-    }
 
     .content__inside{
         width: 900px;
@@ -46,6 +43,16 @@
                     top: 0px;
                 }
             }
+        }
+    }
+
+    &_bg-grey{
+        background: $light-grey url("../img/line-black.svg") left top / 60px;
+    }
+    &_card{
+        padding: 40px 0;
+        .nav{
+            margin-top: 40px;
         }
     }
 }
