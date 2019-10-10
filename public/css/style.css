@@ -1332,11 +1332,13 @@ a.link-white:hover {
   flex-wrap: nowrap;
 }
 
+.form-group_inline .p-relative + .input,
 .form-group_inline .input + .input {
   margin-left: 10px;
   margin-top: 0;
 }
 
+.form-group_inline .p-relative + .btn,
 .form-group_inline .input + .btn {
   margin-left: 10px;
   margin-top: 0;
