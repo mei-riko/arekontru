@@ -1707,11 +1707,19 @@ a.link-white:hover {
   padding: 20px;
   text-transform: uppercase;
   color: #d7d1d1;
-  width: 140px;
+  width: 160px;
 }
 
 .table_contact .table-row .table-row__value {
   padding: 20px;
+}
+
+.table_contact .link-inverse {
+  text-decoration: underline;
+}
+
+.table_contact .link-inverse:hover {
+  color: #ffffff;
 }
 
 .table_striped .table-row:nth-child(2n) {

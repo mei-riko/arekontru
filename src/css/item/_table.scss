@@ -20,10 +20,16 @@
                 padding: 20px;
                 text-transform: uppercase;
                 color: #d7d1d1;
-                width: 140px;
+                width: 160px;
             }
             .table-row__value{
                 padding: 20px;
+            }
+        }
+        .link-inverse{
+            text-decoration: underline;
+            &:hover{
+                color: $white;
             }
         }
     }
