@@ -9,7 +9,24 @@
     .table-col{
         padding: 16px 20px;
     }
-
+    &_contact{
+        background: rgba(255,255,255,0.1);
+        .row + .row{
+            border-top: 1px solid $light-blue;
+        }
+        .table-row{
+            justify-content: flex-start;
+            .table-row__label{
+                padding: 20px;
+                text-transform: uppercase;
+                color: #d7d1d1;
+                width: 140px;
+            }
+            .table-row__value{
+                padding: 20px;
+            }
+        }
+    }
     &_striped{
         .table-row:nth-child(2n){
             background: #f8f8f8;

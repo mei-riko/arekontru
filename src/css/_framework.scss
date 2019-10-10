@@ -39,6 +39,9 @@ p {
     &.lead{
         font-size: 1.15em;
     }
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 ol, ul{
     padding: 0;
@@ -57,6 +60,12 @@ a{
         color: $link-hover-color;
         &:hover{
             color: $link-color;
+        }
+    }
+    &.link-white{
+        color: $white;
+        &:hover{
+            color: $link-hover-color;
         }
     }
 }

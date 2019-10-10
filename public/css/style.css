@@ -388,6 +388,10 @@ p.lead {
   font-size: 1.15em;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 ol, ul {
   padding: 0;
   margin-bottom: 1.25rem;
@@ -410,6 +414,14 @@ a.link-inverse {
 
 a.link-inverse:hover {
   color: #232323;
+}
+
+a.link-white {
+  color: #ffffff;
+}
+
+a.link-white:hover {
+  color: #f95f03;
 }
 
 .p-relative {
@@ -1676,6 +1688,30 @@ a.link-inverse:hover {
 
 .table .table-col {
   padding: 16px 20px;
+}
+
+.table_contact {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.table_contact .row + .row {
+  border-top: 1px solid #22222b;
+}
+
+.table_contact .table-row {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.table_contact .table-row .table-row__label {
+  padding: 20px;
+  text-transform: uppercase;
+  color: #d7d1d1;
+  width: 140px;
+}
+
+.table_contact .table-row .table-row__value {
+  padding: 20px;
 }
 
 .table_striped .table-row:nth-child(2n) {
