@@ -30,19 +30,50 @@
     }
 
     &-additionally{
-        padding: 12px 0;
+        padding: 6px 0;
         color: $light-text;
         background: $light-blue;
         .footer-additionally__text{
             font-size: 12px;
             line-height: 1;
             margin: 0;
+            padding: 6px 0;
         }
         .footer-link{
             color: $light-text;
             &:hover{
                 color: $link-hover-color;
             }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .footer{
+        .list_icon{
+            .list__item{
+                & + .list__item{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        .footer__logo{
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .list_icon{
+            justify-content: center;
+            .list__item{
+                margin: 2px 20px;
+            }
+        }
+
+        &-additionally{
+            padding: 12px 0;
         }
     }
 }

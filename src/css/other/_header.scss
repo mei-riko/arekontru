@@ -57,3 +57,20 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        .header__logo{
+            height: 50px;
+        }
+        .header__bottom{
+            padding: 0;
+            .header__phone{
+                font-size: 0;
+                width: 24px;
+                height: 24px;
+                background-size: contain;
+            }
+        }
+    }
+}

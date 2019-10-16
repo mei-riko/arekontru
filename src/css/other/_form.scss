@@ -98,10 +98,7 @@
         display: flex;
         flex-wrap: nowrap;
         .p-relative + .input,
-        .input + .input{
-            margin-left: 10px;
-            margin-top: 0;
-        }
+        .input + .input,
         .p-relative + .btn,
         .input + .btn{
             margin-left: 10px;
@@ -117,7 +114,6 @@
 .jGrowl {
     font-family: "Noto Sans"
 }
-
 .jGrowl#jGrowl {
     top: 50%;
     left: 50%;
@@ -160,6 +156,25 @@
             background-color: #fef8f8!important;
             .jGrowl-close {
                 background: #df0a0a;
+            }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .form-group{
+        &_inline{
+            flex-wrap: wrap;
+            
+            .p-relative + .input,
+            .input + .input,
+            .p-relative + .btn,
+            .input + .btn{
+                margin-left: 0px;
+                margin-top: 10px;
+            }
+            .input, .btn{
+                width: 100%;
             }
         }
     }

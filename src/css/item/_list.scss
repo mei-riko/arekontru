@@ -14,7 +14,7 @@
 
                 position: absolute;
                 left: 0;
-                top: 8px;
+                top: calc(50% - 3px);
                 width: 6px;
                 height: 6px;
                 border-radius: 6px;  
@@ -178,6 +178,19 @@
         .list__item{
             & + .list__item{
                 margin-left: 60px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .list{
+        &_step{
+            .list__item{
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                padding-bottom: 30px;
             }
         }
     }

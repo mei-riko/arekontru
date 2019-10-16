@@ -40,6 +40,7 @@
         &:after{
             content: 'ПОДРОБНЕЕ О БЫТОВКЕ';
             display: inline-block;
+            white-space: nowrap;
 
             font-weight: 700;
 
@@ -57,5 +58,28 @@
     .catalog__title{
         font-weight: 900;
         font-size: 1.25rem;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .catalog{
+        .catalog__image{
+            height: 200px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .catalog{
+        padding: 60px 0 20px;
+        .catalog__image{
+            height: 180px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .catalog{
+        padding: 40px 0 0;
+        .catalog__image{
+            height: 220px;
+        }
     }
 }

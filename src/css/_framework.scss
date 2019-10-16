@@ -139,6 +139,7 @@ a{
 
 .mr-0{margin-right: 0}
 .ml-0{margin-left: 0}
+.m-auto{margin:0 auto;}
 
 .pt-0{padding-top: 0px;}
 .pt-30{padding-top: 30px;}
@@ -160,6 +161,7 @@ a{
 	
     .mr-lg-0{margin-right: 0}
     .ml-lg-0{margin-left: 0}
+    .m-lg-auto{margin:0 auto;}
 
     .text-lg-left{text-align: left;}
     .text-lg-center{text-align: center;}
@@ -167,6 +169,10 @@ a{
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .d-md-none{display: none;}
+    
+    .text-md-left{text-align: left;}
+    .text-md-center{text-align: center;}
+    .text-md-right{text-align: right;}
     
     .mt-md-0{margin-top: 0px;}
     .mt-md-30{margin-top: 30px;}
@@ -177,12 +183,16 @@ a{
 	
     .mr-md-0{margin-right: 0}
     .ml-md-0{margin-left: 0}
+    .m-md-auto{margin:0 auto;}
 
     .breadcrumbs{
         margin-bottom: 0;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    body{
+        font-size: 16px;
+    }
     .d-sm-none{display: none;}
     
     .h1,h1{font-size: 1.75rem;}
@@ -207,4 +217,5 @@ a{
 
     .mr-sm-0{margin-right: 0}
     .ml-sm-0{margin-left: 0}
+    .m-sm-auto{margin:0 auto;}
 }

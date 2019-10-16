@@ -5,6 +5,8 @@
         font-size: 46px;
         font-weight: 300;
         .text-bold{
+            width: 100%;
+            display: block;
             font-weight: 900;
         }
     }
@@ -20,5 +22,78 @@
     }
     .form{
         margin-top: 60px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .garant{
+        .garant__title{
+            font-size: 36px;
+        }
+        .list{
+            .list__item{
+                flex: 0 0 100%;
+                max-width: 300px;
+
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .garant{
+        .garant__title{
+            font-size: 46px;
+            .text-bold{
+                display: inline-block;
+            }
+        }
+        .garant__offer{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form {
+            width: 425px;
+            max-width: 100%;
+            margin: 30px auto 60px;
+        }
+        .list{
+            width: 300px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            .list__item{
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .garant{
+        padding: 40px 0;
+        .garant__title{
+            font-size: 24px;
+            width: 370px;
+            max-width: 100%;
+            margin: 0 auto 1.5rem;
+        }
+        .garant__offer{
+            font-size: 16px;
+            width: 370px;
+            max-width: 100%;
+            margin: 0 auto 1.5rem;
+        }
+        .list {
+            width: 370px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .form {
+            width: 370px;
+            max-width: 100%;
+            margin: 20px auto 40px;
+        }
     }
 }

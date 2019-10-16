@@ -13,38 +13,38 @@ html(lang="ru")
         .header-block
             .container
                 .row.align-items-center
-                    .col-7
+                    .col-7.col-md-12
                         h1.header-block__title 
                             span.text-bold Всегда в наличии. 
-                            span Доставка через 3 часа. Только новые контейнеры и бытовки.
+                            span Доставка через 3&nbsp;часа. Только новые контейнеры и бытовки.
                         p.header-block__offer Возьмите в аренду блок-контейнеры бытовки под ключ на любой срок. Это выгодно и просто: не нужно обслуживать, ремонтировать и продавать после использования.
-                    .col-5
+                    .col-5.col-md-12
                         img.img-fluid(src="../img/schema.png" alt="" title="")
         .catalog
             .container
                 .row
-                    .col-6
+                    .col-6.col-sm-12
                         a.catalog__item(href="/card.html")
                             .catalog__image(style="background-image: url('../img/demo-1.png');")
                             .catalog__title Бытовка «Стандарт»
                             ul.list.list_circle
                                 li.list__item в наличии: 
                                     span.text-bold 12 шт.
-                    .col-6
+                    .col-6.col-sm-12
                         a.catalog__item(href="/card.html")
                             .catalog__image(style="background-image: url('../img/demo-2.png');")
                             .catalog__title Бытовка «С тамбуром»
                             ul.list.list_circle
                                 li.list__item в наличии: 
                                     span.text-bold 12 шт.
-                    .col-6
+                    .col-6.col-sm-12
                         a.catalog__item(href="/card.html")
                             .catalog__image(style="background-image: url('../img/demo-3.png');")
                             .catalog__title Контейнер 20 футов
                             ul.list.list_circle
                                 li.list__item в наличии: 
                                     span.text-bold 12 шт.
-                    .col-6
+                    .col-6.col-sm-12
                         a.catalog__item(href="/card.html")
                             .catalog__image(style="background-image: url('../img/demo-4.png');")
                             .catalog__title Контейнер 40 футов
@@ -54,11 +54,11 @@ html(lang="ru")
         .garant
             .container
                 .row.align-items-center
-                    .col-7
-                        p.garant__title.h2 
+                    .col-7.col-sm-12.col-md-12.col-lg-8
+                        p.garant__title.h2.text-md-center.text-sm-left
                             span.text-bold.text-gradient Гарантируем 
-                            | выполнение&nbsp;обязательств
-                        p.garant__offer Подписываем договор, соответствующий всем требованиям законодательства и&nbsp;РФ
+                            | выполнение обязательств
+                        p.garant__offer.text-md-center.text-sm-left Подписываем договор, соответствующий всем требованиям законодательства и&nbsp;РФ
                         ul.list.list_step
                             li.list__item 
                                 span.list__info соблюдаем оговоренные сроки работ 
@@ -78,14 +78,14 @@ html(lang="ru")
                                 input.checkbox__input#policy(type="checkbox" checked="")
                                 label.checkbox__label(for="policy") согласен с обработкой 
                                     a.checkbox__link(href="/privacy.pdf" title="Соглашение на обработку персональных данных") персональных данных
-                    .col-5
-                        img.mr-0.img-fluid(src="../img/demo-doc.png")
+                    .col-5.col-sm-12.col-md-12.col-lg-4
+                        img.mr-0.m-md-auto.img-fluid(src="../img/demo-doc.png")
         .content
             .container
-                .row.justify-content-center.align-items-center
-                    .col-2.text-center
+                .row.justify-content-center.align-items-center.flex-sm-column-reverse
+                    .col-2.text-center.col-sm-12.col-lg-2.text-md-left.text-sm-center
                         .modal-open(data-fancybox data-src="#hidden-content") +
-                    .col-8
+                    .col-8.col-sm-12.col-lg-10
                         p.mb-0 Изготавливать строительные блок контейнеры наиболее целесообразно из металла. Таким образом, конструкция получается более прочной и устойчивой к внешним воздействиям. В качестве материала для сварного каркаса используются металлические профиля. В качестве внешней оболочки изготовитель бытовки может использовать оцинкованную сталь или листы профнастила с полимерным или лакокрасочным покрытием в качестве защиты от коррозии. Внутри помещение обшивается пластиковой или деревянной вагонкой, ДСП, OSB или другими листовыми материалами, имеющими высокую прочность и износостойкость.
         include chunks/footer.pug
         script(src="./js/jquery.fancybox.min.js")
