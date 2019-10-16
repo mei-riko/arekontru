@@ -20,9 +20,12 @@
                 padding: 20px;
                 text-transform: uppercase;
                 color: #d7d1d1;
-                width: 160px;
+                flex: 0 0 160px;
+                max-width: 160px;
             }
             .table-row__value{
+                flex: 0 0 calc(100% - 160px);
+                max-width: calc(100% - 160px);
                 padding: 20px;
             }
         }
@@ -44,6 +47,30 @@
     &_small{
         .table-col{
             padding: 8px 20px;
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .table{
+        &_contact{
+            .table-row{
+                flex-wrap: wrap;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                & + .table-row{
+                    padding-top: 0px;
+                }
+                .table-row__label{
+                    width: 100%;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+                .table-row__value{
+                    padding-top: 6px;
+                    padding-bottom: 0px;
+                }
+            }
         }
     }
 }

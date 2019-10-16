@@ -2529,10 +2529,15 @@ a.link-white:hover {
   padding: 20px;
   text-transform: uppercase;
   color: #d7d1d1;
-  width: 160px;
+  -ms-flex: 0 0 160px;
+  flex: 0 0 160px;
+  max-width: 160px;
 }
 
 .table_contact .table-row .table-row__value {
+  -ms-flex: 0 0 calc(100% - 160px);
+  flex: 0 0 calc(100% - 160px);
+  max-width: calc(100% - 160px);
   padding: 20px;
 }
 
@@ -2554,6 +2559,27 @@ a.link-white:hover {
 
 .table_small .table-col {
   padding: 8px 20px;
+}
+
+@media all and (max-width: 576px) {
+  .table_contact .table-row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .table_contact .table-row + .table-row {
+    padding-top: 0px;
+  }
+  .table_contact .table-row .table-row__label {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .table_contact .table-row .table-row__value {
+    padding-top: 6px;
+    padding-bottom: 0px;
+  }
 }
 
 .tab-content_product {
@@ -2752,6 +2778,9 @@ a.link-white:hover {
   .header-block_error .header-block__title {
     font-size: 100px;
     margin-bottom: 20px;
+  }
+  .header-block_inside .header-block_inside__title {
+    margin-bottom: 40px;
   }
 }
 
