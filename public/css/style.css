@@ -2698,6 +2698,9 @@ a.link-white:hover {
   .header-block .header-block__title + .header-block__offer {
     margin-top: 0px;
   }
+  .header-block_error .header-block__title {
+    font-size: 100px;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -2708,6 +2711,9 @@ a.link-white:hover {
     margin-top: 42px;
     margin-bottom: 40px;
   }
+  .header-block_error .header-block__title {
+    font-size: 72px;
+  }
 }
 
 @media all and (max-width: 576px) {
@@ -2717,6 +2723,10 @@ a.link-white:hover {
   .header-block .header-block__title + .header-block__offer {
     margin-top: 0px;
     margin-bottom: 40px;
+  }
+  .header-block_error .header-block__title {
+    font-size: 100px;
+    margin-bottom: 20px;
   }
 }
 

@@ -60,6 +60,11 @@
                 margin-top: 0px;
             }
         }
+        &_error{
+            .header-block__title{
+                font-size: 100px;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
@@ -71,6 +76,12 @@
                 margin-bottom: 40px;
             }
         }
+
+        &_error{
+            .header-block__title{
+                font-size: 72px;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
@@ -80,6 +91,12 @@
             & + .header-block__offer {
                 margin-top: 0px;
                 margin-bottom: 40px;
+            }
+        }
+        &_error{
+            .header-block__title{
+                font-size: 100px;
+                margin-bottom: 20px;
             }
         }
     }
