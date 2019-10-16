@@ -1983,6 +1983,12 @@ a.link-white:hover {
   margin-top: 20px;
 }
 
+.label {
+  font-size: 12px;
+  color: #858897;
+  margin-bottom: 4px;
+}
+
 .input {
   padding: 12px 20px;
   border: 1px solid #ceced4;
@@ -1994,24 +2000,24 @@ a.link-white:hover {
   outline: none;
 }
 
-.input:hover::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.input:hover:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.input:hover::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.input:hover::placeholder {
-  opacity: 0;
-}
-
 .input:focus {
   outline: none;
+}
+
+.input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
 }
 
 .input::-webkit-input-placeholder {
@@ -2106,12 +2112,29 @@ a.link-white:hover {
   flex-wrap: nowrap;
 }
 
+.form-group_inline .label {
+  margin-bottom: 0;
+}
+
 .form-group_inline .p-relative + .input,
 .form-group_inline .input + .input,
 .form-group_inline .p-relative + .btn,
 .form-group_inline .input + .btn {
   margin-left: 10px;
   margin-top: 0;
+}
+
+.form-group + .form-group {
+  margin-top: 15px;
+}
+
+.form-group.row {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.form-group.row .col, .form-group.row .col-1, .form-group.row .col-2, .form-group.row .col-3, .form-group.row .col-4, .form-group.row .col-5, .form-group.row .col-6, .form-group.row .col-7, .form-group.row .col-8, .form-group.row .col-9, .form-group.row .col-10, .form-group.row .col-11, .form-group.row .col-12 {
+  padding: 0 8px;
 }
 
 .fullwidth {

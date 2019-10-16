@@ -7,6 +7,7 @@
     <title>Basic Page</title>
     <link href="./css/slick.css" rel="stylesheet"/>
     <link href="./css/slick-theme.css" rel="stylesheet"/>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -66,7 +67,7 @@
               </div>
               <div class="col-4 text-right col-lg-12 text-lg-left">
                 <p class="product-info__price mb-0">200 руб./сутки</p>
-                <p class="product-info__available mb-0">в наличии: <span class="text-bold">55 шт.</span></p>
+                <p class="product-info__available mb-0">в наличии: <span class="text-bold" id="maxCount">55</span> шт.</p>
               </div>
             </div>
             <p class="product-info__size">Размер: <span class="text-bold">6000х2400х2400</span></p>
@@ -81,15 +82,15 @@
             </div>
             <div class="product-info__calculator" id="calculator">
               <p class="product-info__title">Ориентировочная стоимость аренды</p>
-              <p class="text-small text-grey mb-0">из расчета 6.500 руб./месяц за 1 штуку</p>
+              <p class="text-small text-grey mb-0">из расчета <span id="priceCalc">6500</span> руб./месяц за 1 штуку</p>
               <div class="form-group form-group_inline">
                 <div class="label">Количество:</div>
-                <input class="input" type="number" value="1"/>
+                <input class="input" id="priceCount" type="number" value="1" min="1"/>
                 <div class="label">Срок:</div>
-                <input class="input" type="number" value="1"/>
+                <input class="input" id="pricePeriod" type="number" value="1" min="1"/>
               </div>
-              <p class="text-small text-grey mb-0">Итого: <span class="product-info__price">19.500 руб.</span></p>
-            </div><a class="btn btn_cta" href="#"><span class="btn__inside">Арендовать</span></a>
+              <p class="text-small text-grey mb-0">Итого: <span class="product-info__price"> <span id="priceResult">6500</span> руб.</span></p>
+            </div><a class="btn btn_cta" id="modalRentBtn" data-fancybox="modalRent" data-src="#modalRent" href="javascript:;" data-auto-focus="false"><span class="btn__inside">Арендовать</span></a>
           </div>
         </div>
         <ul class="nav" id="myTab" role="tablist">
@@ -186,10 +187,39 @@
         </div>
       </div>
     </div>
+    <div class="modal modal_rent d-none" id="modalRent">
+      <div class="modal__content">
+        <p class="h4 text-bold">Заявка на аренду</p>
+        <form class="form" action="">
+          <div class="form-group">
+            <input class="input fullwidth" type="text" placeholder="Ваше имя"/>
+            <input class="input phone fullwidth" type="tel" placeholder="Номер телефона"/>
+          </div>
+          <div class="form-group row">
+            <div class="col-6 col-sm-12">
+              <div class="label">Количество:</div>
+              <input class="input fullwidth" id="modalCount" type="number" value="1" min="1"/>
+            </div>
+            <div class="col-6 col-sm-12">
+              <div class="label">Срок:</div>
+              <input class="input fullwidth" id="modalPeriod" type="number" value="1" min="1"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn_cta"> <span class="btn__inside">Отправить заявку                    </span></button>
+          </div>
+          <div class="form__agree checkbox text-small">
+            <input class="checkbox__input" id="policy" type="checkbox" checked=""/>
+            <label class="checkbox__label" for="policy">согласен с обработкой <a class="checkbox__link" href="/privacy.pdf" title="Соглашение на обработку персональных данных">персональных данных</a></label>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="./js/util.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

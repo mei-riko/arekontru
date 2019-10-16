@@ -82,4 +82,22 @@ $(document).ready(() =>{
             ]            
         });
     }
+
+    // Rent JS
+    // Any change input
+    let priceCalc = parseInt($("#priceCalc").text());
+    let priceResult = $("#priceResult");
+    let priceCount = $("#priceCount");
+    let pricePeriod = $("#pricePeriod");
+    $("#calculator .input").on("input",function(ev){
+        let inputChange = 0;
+        inputChange = parseInt(priceCount.val())*parseInt(pricePeriod.val())*priceCalc;  
+        priceResult.text(inputChange);
+    });
+    // Click Btn
+    $("#modalRentBtn").on("click", function(){
+        $("#modalCount").val(parseInt(priceCount.val()));
+        $("#modalPeriod").val(parseInt(pricePeriod.val()));
+    });
+
 });

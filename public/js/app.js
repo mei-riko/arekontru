@@ -156,6 +156,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             }]
         });
     }
+
+    // Rent JS
+    // Any change input
+    var priceCalc = parseInt((0, _jquery2.default)("#priceCalc").text());
+    var priceResult = (0, _jquery2.default)("#priceResult");
+    var priceCount = (0, _jquery2.default)("#priceCount");
+    var pricePeriod = (0, _jquery2.default)("#pricePeriod");
+    (0, _jquery2.default)("#calculator .input").on("input", function (ev) {
+        var inputChange = 0;
+        inputChange = parseInt(priceCount.val()) * parseInt(pricePeriod.val()) * priceCalc;
+        priceResult.text(inputChange);
+    });
+    // Click Btn
+    (0, _jquery2.default)("#modalRentBtn").on("click", function () {
+        (0, _jquery2.default)("#modalCount").val(parseInt(priceCount.val()));
+        (0, _jquery2.default)("#modalPeriod").val(parseInt(pricePeriod.val()));
+    });
 });
 
 /***/ }),

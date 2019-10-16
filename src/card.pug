@@ -7,6 +7,7 @@ html(lang="ru")
 
         link(href='./css/slick.css', rel='stylesheet')
         link(href='./css/slick-theme.css', rel='stylesheet')
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         link(href='./css/style.css', rel='stylesheet')
 
     body
@@ -44,7 +45,8 @@ html(lang="ru")
                             .col-4.text-right.col-lg-12.text-lg-left
                                 p.product-info__price.mb-0 200 руб./сутки
                                 p.product-info__available.mb-0 в наличии: 
-                                    span.text-bold 55 шт.
+                                    span.text-bold#maxCount 55
+                                    |  шт.
                         p.product-info__size Размер: 
                             span.text-bold 6000х2400х2400
                         .list.list_circle.product-info__list
@@ -63,15 +65,19 @@ html(lang="ru")
                                 span.text-bold до -35
                         .product-info__calculator#calculator
                             p.product-info__title Ориентировочная стоимость аренды
-                            p.text-small.text-grey.mb-0 из расчета 6.500 руб./месяц за 1 штуку
+                            p.text-small.text-grey.mb-0 из расчета 
+                                span#priceCalc 6500
+                                |  руб./месяц за 1 штуку
                             .form-group.form-group_inline
                                 .label Количество:
-                                input.input(type="number" value="1")
+                                input.input#priceCount(type="number" value="1" min="1")
                                 .label Срок:
-                                input.input(type="number" value="1")
+                                input.input#pricePeriod(type="number" value="1" min="1")
                             p.text-small.text-grey.mb-0 Итого: 
-                                span.product-info__price 19.500 руб.
-                        a.btn.btn_cta(href="#")
+                                span.product-info__price 
+                                    span#priceResult 6500
+                                    |  руб.
+                        a.btn.btn_cta#modalRentBtn(data-fancybox="modalRent" data-src="#modalRent" href="javascript:;" data-auto-focus="false")
                             span.btn__inside Арендовать
                 ul.nav#myTab(role="tablist")
                     li.nav__item
@@ -131,8 +137,30 @@ html(lang="ru")
                                 p.text-uppercase.text-bold.mb-10 С залогом
                                 p Минимальный срок аренды - 1&nbsp;месяц. Невозвратная сумма - стоимость аренды 1&nbsp;месяца.
         include chunks/footer.pug
+        .modal.modal_rent.d-none#modalRent
+            .modal__content
+                p.h4.text-bold Заявка на аренду
+                form.form(action="")
+                    .form-group
+                        input.input.fullwidth(type="text" placeholder="Ваше имя")
+                        input.input.phone.fullwidth(type="tel" placeholder="Номер телефона")
+                    .form-group.row
+                        .col-6.col-sm-12
+                            .label Количество:
+                            input.input.fullwidth#modalCount(type="number" value="1" min="1")
+                        .col-6.col-sm-12
+                            .label Срок:
+                            input.input.fullwidth#modalPeriod(type="number" value="1" min="1")
+                    .form-group
+                        button.btn.btn_cta 
+                            span.btn__inside Отправить заявку                    
+                    .form__agree.checkbox.text-small
+                        input.checkbox__input#policy(type="checkbox" checked="")
+                        label.checkbox__label(for="policy") согласен с обработкой 
+                            a.checkbox__link(href="/privacy.pdf" title="Соглашение на обработку персональных данных") персональных данных
         script(src="./js/util.js")
         script(src="./js/tab.js")
         script(src="./js/slick.min.js")
         script(src="./js/jquery.inputmask.js")
+        script(src="./js/jquery.fancybox.min.js")
         script(src="./js/app.min.js")
