@@ -148,7 +148,14 @@ a{
 .pb-30{padding-bottom: 30px;}
 .pb-60{padding-bottom: 60px;}
 
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .blockquote, blockquote{
+        padding: 30px 90px;
+        &:before{
+            left: 40px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .d-lg-none{display: none;}
 
@@ -166,6 +173,13 @@ a{
     .text-lg-left{text-align: left;}
     .text-lg-center{text-align: center;}
     .text-lg-right{text-align: right;}
+
+    .blockquote, blockquote{
+        padding: 30px 60px;
+        &:before{
+            left: 20px;
+        }
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .d-md-none{display: none;}
@@ -201,6 +215,14 @@ a{
     .h4,h4{font-size: 1.5rem;}
     .h5,h5{font-size: 1.25rem;}
     .h6,h6{font-size: 1rem;}
+
+    .blockquote, blockquote{
+        padding: 60px 20px 20px;
+        &:before{
+            left: 20px;
+            top: 20px;
+        }
+    }
 
     .text-sm-left{text-align: left;}
     .text-sm-center{text-align: center;}

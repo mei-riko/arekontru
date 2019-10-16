@@ -598,6 +598,15 @@ a.link-white:hover {
   padding-bottom: 60px;
 }
 
+@media all and (max-width: 1400px) {
+  .blockquote, blockquote {
+    padding: 30px 90px;
+  }
+  .blockquote:before, blockquote:before {
+    left: 40px;
+  }
+}
+
 @media all and (max-width: 992px) {
   .d-lg-none {
     display: none;
@@ -637,6 +646,12 @@ a.link-white:hover {
   }
   .text-lg-right {
     text-align: right;
+  }
+  .blockquote, blockquote {
+    padding: 30px 60px;
+  }
+  .blockquote:before, blockquote:before {
+    left: 20px;
   }
 }
 
@@ -709,6 +724,13 @@ a.link-white:hover {
   }
   .h6, h6 {
     font-size: 1rem;
+  }
+  .blockquote, blockquote {
+    padding: 60px 20px 20px;
+  }
+  .blockquote:before, blockquote:before {
+    left: 20px;
+    top: 20px;
   }
   .text-sm-left {
     text-align: left;
