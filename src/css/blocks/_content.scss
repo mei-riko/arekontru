@@ -65,5 +65,18 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .content{
         padding: 40px 0;
+        &_card{
+            padding-top: 1.5rem;
+            .slider_for{
+                margin-bottom: 1.5rem;
+            }
+            .nav{
+                margin-bottom: 20px;
+                .nav__link{
+                    font-size: 12px;
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }

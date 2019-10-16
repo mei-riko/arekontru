@@ -62,11 +62,14 @@
                     padding-top: 0px;
                 }
                 .table-row__label{
-                    width: 100%;
+                    flex: 0 0 100%;
+                    max-width: 100%;
                     padding-top: 0px;
                     padding-bottom: 0px;
                 }
                 .table-row__value{
+                    flex: 0 0 100%;
+                    max-width: 100%;
                     padding-top: 6px;
                     padding-bottom: 0px;
                 }

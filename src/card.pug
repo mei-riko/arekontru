@@ -15,7 +15,7 @@ html(lang="ru")
         .header-block.header-block_card
             .container
                 h1.text-bold.text-white.h3 Пришлите карточку предприятия и получите бытовку из вагонки:
-                .list.list_check.list_inline.text-uppercase
+                .list.list_check.text-uppercase.slider.slider_list
                     .list__item через 3 часа
                     .list__item по цене ДВП
                     .list__item без залога
@@ -23,7 +23,7 @@ html(lang="ru")
         .content.content_card
             .container
                 .row
-                    .col-6
+                    .col-6.col-md-12
                         .slider.slider_for
                             .slider__image
                                 img.slider__item(src="./img/demo-1.png")
@@ -37,11 +37,11 @@ html(lang="ru")
                                 img.slider__item(src="./img/demo-3.png")
                                 img.slider__item(src="./img/demo-4.png")
                                 img.slider__item(src="./img/demo-2.png")
-                    .col-6.product-info
+                    .col-6.col-md-12.product-info
                         .row
-                            .col-8
+                            .col-8.col-lg-12
                                 h1.product-info__name Бытовка «С тамбуром»
-                            .col-4.text-right
+                            .col-4.text-right.col-lg-12.text-lg-left
                                 p.product-info__price.mb-0 200 руб./сутки
                                 p.product-info__available.mb-0 в наличии: 
                                     span.text-bold 55 шт.
@@ -124,10 +124,10 @@ html(lang="ru")
                         .list.list_info
                             .list__item.text-bold Вернем деньги за неиспользованные дни
                         .row.mt-30
-                            .col-6
+                            .col-6.col-sm-12.mb-sm-30
                                 p.text-uppercase.text-bold.mb-10 Без залога
                                 p Воспользоваться данными условиями возможно только при единовременной оплате не меньше 3&nbsp;месяцев аренды.
-                            .col-6
+                            .col-6.col-sm-12
                                 p.text-uppercase.text-bold.mb-10 С залогом
                                 p Минимальный срок аренды - 1&nbsp;месяц. Невозвратная сумма - стоимость аренды 1&nbsp;месяца.
         include chunks/footer.pug

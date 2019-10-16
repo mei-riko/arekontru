@@ -82,6 +82,9 @@
                 font-size: 72px;
             }
         }
+        &_card{
+            padding-bottom: 1.5rem;
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
@@ -102,6 +105,18 @@
         &_inside{
             .header-block_inside__title{
                 margin-bottom: 40px;
+            }
+        }
+        &_card{
+            padding-bottom: 1.5rem;
+            h1.h3{
+                font-size: 1rem;
+            }
+            .list_check{
+                .list__item{
+                    padding: 10px 0;
+                    padding-left: 60px;
+                }
             }
         }
     }

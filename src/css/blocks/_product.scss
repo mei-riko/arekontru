@@ -63,3 +63,46 @@
         max-width: 100%;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .product-info{
+        .product-info__list{
+            column-count: 1;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .product-info{
+        .product-info__list{
+            column-count: 2;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .product-info{
+        .product-info__name{
+            font-size: 1.75rem;
+            margin-bottom: .5rem;
+        }
+        .product-info__list{
+            column-count: 1;
+        }
+    }
+}
+@media all and (max-width: 390px){
+    .product-info{
+        .product-info__calculator{
+            .form-group{
+                .label{
+                    width: calc(100% - 120px);
+                }
+                .input{
+                    width: 110px;
+                    margin-bottom: 10px;
+                    & + .label{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

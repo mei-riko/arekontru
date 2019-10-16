@@ -3,7 +3,6 @@
     .slider__image{
         .slick-prev, .slick-next{
             top: 50%;
-            transform: translateY(22px);
 
             background: $blue;
             
@@ -21,7 +20,7 @@
         }
         .slick-prev{
             left: 0;
-            transform: translateX(-22px);
+            transform: translateX(-22px) translateY(-22px);
             background: $blue url("/img/left-arrow_w.svg") no-repeat center / 20px;
             &:hover{
                 background: $dark-blue url("/img/left-arrow_w.svg") no-repeat center / 20px;
@@ -29,7 +28,7 @@
         }
         .slick-next{
             right: 0;
-            transform: translateX(22px);
+            transform: translateX(22px) translateY(-22px);
             background: $blue url("/img/right-arrow_w.svg") no-repeat center / 20px;
             &:hover{
                 background: $dark-blue url("/img/right-arrow_w.svg") no-repeat center / 20px;
@@ -59,5 +58,62 @@
     }
     &_for{
         margin-bottom: 40px;
+    }
+    &_list{
+        .slick-prev, .slick-next{
+            opacity: .4;
+            &:hover, &:focus{
+                opacity: 1;
+            }
+        }
+        .slick-prev{
+            left: auto;
+            right: 44px;
+        }
+        .slick-next{
+            right: 0;
+        }
+    }
+    // Slick
+    .slick-slide{
+        height: auto;
+        outline: none;
+        &:hover, &:focus{
+            outline: none;
+        }
+    }
+    .slick-prev, .slick-next{
+        width: 44px;
+        height: 44px;
+
+        z-index: 99;
+        &:before{
+            content:'';
+        }
+    }
+    .slick-prev{
+        background: url("/img/left-arrow_w.svg") no-repeat center / 20px;
+    }
+    .slick-next{
+        background: url("/img/right-arrow_w.svg") no-repeat center / 20px;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .slider{
+        &_list{
+            padding-right: 88px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .slider{
+        .slider__image{
+            .slick-next{
+                right: 10px;
+            }
+            .slick-prev{
+                left: 10px;
+            }
+        }
     }
 }

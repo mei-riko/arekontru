@@ -132,6 +132,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             // centerMode: true,
             focusOnSelect: true
         });
+
+        (0, _jquery2.default)('.header-block_card .list.slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            // arrows: false,
+            // dots: false,
+            // fade: true,
+            responsive: [{
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: true
+                }
+            }, {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }]
+        });
     }
 });
 
