@@ -531,7 +531,7 @@ a.link-white:hover {
 }
 
 .mt-0 {
-  margin-top: 0px;
+  margin-top: 0px !important;
 }
 
 .mt-10 {
@@ -539,15 +539,15 @@ a.link-white:hover {
 }
 
 .mt-30 {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .mt-60 {
-  margin-top: 60px;
+  margin-top: 60px !important;
 }
 
 .mb-0 {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 .mb-10 {
@@ -555,11 +555,11 @@ a.link-white:hover {
 }
 
 .mb-30 {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .mb-60 {
-  margin-bottom: 60px;
+  margin-bottom: 60px !important;
 }
 
 .mr-0 {
@@ -599,6 +599,9 @@ a.link-white:hover {
 }
 
 @media all and (max-width: 1400px) {
+  .d-xl-none {
+    display: none;
+  }
   .blockquote, blockquote {
     padding: 30px 90px;
   }
@@ -612,22 +615,22 @@ a.link-white:hover {
     display: none;
   }
   .mt-lg-0 {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .mt-lg-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
   .mt-lg-60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
   .mb-lg-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .mb-lg-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
   .mb-lg-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
   .mr-lg-0 {
     margin-right: 0;
@@ -669,22 +672,22 @@ a.link-white:hover {
     text-align: right;
   }
   .mt-md-0 {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   .mt-md-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
   .mt-md-60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
   .mb-md-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .mb-md-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
   .mb-md-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
   .mr-md-0 {
     margin-right: 0;
@@ -748,19 +751,19 @@ a.link-white:hover {
     margin-top: 0;
   }
   .mt-sm-30 {
-    margin-top: 30px;
+    margin-top: 30px !important;
   }
   .mt-sm-60 {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
   .mb-sm-0 {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
   }
   .mb-sm-30 {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
   .mb-sm-60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
   }
   .mr-sm-0 {
     margin-right: 0;
