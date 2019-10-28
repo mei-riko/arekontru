@@ -16,7 +16,7 @@ html(lang="ru")
         .header-block.header-block_card
             .container
                 h1.text-bold.text-white.h3 Пришлите карточку предприятия и получите бытовку из вагонки:
-                .list.list_check.text-uppercase.slider.slider_list
+                .list.list_check.list_inline-wrap.text-uppercase.align-items-center
                     .list__item через 3 часа
                     .list__item по цене ДВП
                     .list__item без залога
@@ -24,6 +24,14 @@ html(lang="ru")
         .content.content_card
             .container
                 .row
+                    .col-12.product-info.d-none.d-md-block.mb-0.mb-md-30
+                        p.product-info__name Бытовка «С тамбуром»
+                        p.product-info__price.mb-0 200 руб./сутки
+                        p.product-info__available.mb-0 в наличии: 
+                            span.text-bold#maxCount 55
+                            |  шт.
+                        p.product-info__size Размер: 
+                            span.text-bold 6000х2400х2400
                     .col-6.col-md-12
                         .slider.slider_for
                             .slider__image
@@ -39,7 +47,7 @@ html(lang="ru")
                                 img.slider__item(src="./img/demo-4.png")
                                 img.slider__item(src="./img/demo-2.png")
                     .col-6.col-md-12.product-info
-                        .row
+                        .row.d-md-none
                             .col-8.col-lg-12
                                 h1.product-info__name Бытовка «С тамбуром»
                             .col-4.text-right.col-lg-12.text-lg-left
@@ -47,7 +55,7 @@ html(lang="ru")
                                 p.product-info__available.mb-0 в наличии: 
                                     span.text-bold#maxCount 55
                                     |  шт.
-                        p.product-info__size Размер: 
+                        p.product-info__size.d-md-none Размер: 
                             span.text-bold 6000х2400х2400
                         .list.list_circle.product-info__list
                             .list__item Тип отделки: 

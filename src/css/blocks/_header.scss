@@ -50,6 +50,14 @@
     }
     &_card{
         padding-bottom: 1.5rem;
+        .list_check{
+            .list__item{
+                padding: 10px 0;
+                padding-left: 60px;
+                width: 220px;
+                max-width: 50%;
+            }
+        }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
@@ -112,10 +120,25 @@
             h1.h3{
                 font-size: 1rem;
             }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header-block{
+        &_card{
             .list_check{
+                font-size: 12px;
                 .list__item{
-                    padding: 10px 0;
-                    padding-left: 60px;
+                    padding-left: 40px;
+                    padding-right: 20px;
+                    width: 180px;
+                    &:before,
+                    &:after{
+                        top: calc(50% - 10px);
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }

@@ -438,12 +438,12 @@ a.link-white:hover {
 }
 
 .d-flex {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .text-white {
@@ -600,7 +600,10 @@ a.link-white:hover {
 
 @media all and (max-width: 1400px) {
   .d-xl-none {
-    display: none;
+    display: none !important;
+  }
+  .d-xl-block {
+    display: block !important;
   }
   .blockquote, blockquote {
     padding: 30px 90px;
@@ -612,7 +615,10 @@ a.link-white:hover {
 
 @media all and (max-width: 992px) {
   .d-lg-none {
-    display: none;
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
   }
   .mt-lg-0 {
     margin-top: 0px !important;
@@ -660,7 +666,10 @@ a.link-white:hover {
 
 @media all and (max-width: 768px) {
   .d-md-none {
-    display: none;
+    display: none !important;
+  }
+  .d-md-block {
+    display: block !important;
   }
   .text-md-left {
     text-align: left;
@@ -708,7 +717,10 @@ a.link-white:hover {
     font-size: 16px;
   }
   .d-sm-none {
-    display: none;
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
   }
   .h1, h1 {
     font-size: 1.75rem;
@@ -2509,6 +2521,13 @@ a.link-white:hover {
   margin-left: 60px;
 }
 
+.list_inline-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 @media all and (max-width: 576px) {
   .list_step .list__item, .list_step .content .content__inside ul li, .content .content__inside ul .list_step li {
     -ms-flex: 0 0 100%;
@@ -2827,6 +2846,13 @@ a.link-white:hover {
   padding-bottom: 1.5rem;
 }
 
+.header-block_card .list_check .list__item, .header-block_card .list_check .content .content__inside ul li, .content .content__inside ul .header-block_card .list_check li {
+  padding: 10px 0;
+  padding-left: 60px;
+  width: 220px;
+  max-width: 50%;
+}
+
 @media all and (max-width: 992px) {
   .header-block .header-block__title {
     font-size: 30px;
@@ -2876,9 +2902,21 @@ a.link-white:hover {
   .header-block_card h1.h3 {
     font-size: 1rem;
   }
+}
+
+@media all and (max-width: 576px) {
+  .header-block_card .list_check {
+    font-size: 12px;
+  }
   .header-block_card .list_check .list__item, .header-block_card .list_check .content .content__inside ul li, .content .content__inside ul .header-block_card .list_check li {
-    padding: 10px 0;
-    padding-left: 60px;
+    padding-left: 40px;
+    padding-right: 20px;
+    width: 180px;
+  }
+  .header-block_card .list_check .list__item:before, .header-block_card .list_check .content .content__inside ul li:before, .content .content__inside ul .header-block_card .list_check li:before, .header-block_card .list_check .list__item:after, .header-block_card .list_check .content .content__inside ul li:after, .content .content__inside ul .header-block_card .list_check li:after {
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
   }
 }
 

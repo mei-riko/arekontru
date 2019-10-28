@@ -181,6 +181,10 @@
             }
         }
     }
+    &_inline-wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
