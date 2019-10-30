@@ -91,8 +91,12 @@ $(document).ready(() =>{
     let pricePeriod = $("#pricePeriod");
     $("#calculator .input").on("input",function(ev){
         let inputChange = 0;
-        inputChange = parseInt(priceCount.val())*parseInt(pricePeriod.val())*priceCalc;  
-        priceResult.text(inputChange);
+        if( priceCount.val() != '' && pricePeriod.val() != '' ){
+            inputChange = parseInt(priceCount.val())*parseInt(pricePeriod.val())*priceCalc;  
+            priceResult.text(inputChange);
+        }else{
+            priceResult.text('—');
+        }
     });
     // Click Btn
     $("#modalRentBtn").on("click", function(){

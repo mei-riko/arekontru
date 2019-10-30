@@ -165,8 +165,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     var pricePeriod = (0, _jquery2.default)("#pricePeriod");
     (0, _jquery2.default)("#calculator .input").on("input", function (ev) {
         var inputChange = 0;
-        inputChange = parseInt(priceCount.val()) * parseInt(pricePeriod.val()) * priceCalc;
-        priceResult.text(inputChange);
+        if (priceCount.val() != '' && pricePeriod.val() != '') {
+            inputChange = parseInt(priceCount.val()) * parseInt(pricePeriod.val()) * priceCalc;
+            priceResult.text(inputChange);
+        } else {
+            priceResult.text('—');
+        }
     });
     // Click Btn
     (0, _jquery2.default)("#modalRentBtn").on("click", function () {
